@@ -30,19 +30,19 @@ header{
    height: 50px;
    border-radius: 50%;
 }
-.header_right_singUp{
+.header_right_singIn{
    color: blue;
    background: none;
    border: none;
    font-size: 1.2rem;
 }
-.header_right_singUp:hover{
+.header_right_singIn:hover{
    color: white;
 }
-.header_right_singIn:hover{
+.header_right_singUp:hover{
    background: #4d4dd5;
 }
-.header_right_singIn{
+.header_right_singUp{
 height: 40px;
 padding:0 1rem;
 background: #5D5DFF;
@@ -63,7 +63,7 @@ margin-left: 1rem;
    transition-duration: 0.7s;
    position: absolute;
    z-index: 45;
-   width: 94%;
+   width: 96%;
 }
 
 .header_resBox_menu{
@@ -626,6 +626,13 @@ margin:1.5rem 0 1rem 0;
    }
 }
 @media screen and (max-width:968px) {
+   .header_right{
+      display: none;
+   }
+   .header_resBox{
+      display: block;
+   }
+
    .pageInformationParagrapsBox_card_img{
       width: 350px;
    }
@@ -647,12 +654,6 @@ margin:1.5rem 0 1rem 0;
    }
 }
 @media screen and (max-width:768px) {
-   .header_right{
-      display: none;
-   }
-   .header_resBox{
-      display: block;
-   }
 
    .pageVideoTrial{
       padding: 0 0;

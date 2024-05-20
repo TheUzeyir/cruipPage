@@ -8,8 +8,8 @@ let signUpCloseIcon=document.querySelector('.signUp_closeIcon')
 let signInCloseIcon=document.querySelector('.signIn_closeIcon')
 let signUpBtn=document.querySelector('.header_right_singUp')
 let signInBtn=document.querySelector('.header_right_singIn')
-let sighUpCard=document.querySelector('.signIn_container')
-let sighInCard=document.querySelector('.signUp_container')
+let sighUpCard=document.querySelector('.signUp_container')
+let sighInCard=document.querySelector('.signIn_container')
 let signUpInput=document.querySelectorAll('.signUp_formBox_input')
 let signUpSubmitBtn=document.querySelector('.signUp_Btn')
 
@@ -18,14 +18,24 @@ signUpBtn.addEventListener('click',function(){
 })
 
 signInBtn.addEventListener('click',function(){
-     sighUpCard.style.marginTop="0px"
+     sighInCard.style.marginTop="0px"
 })
 signUpCloseIcon.addEventListener('click',function(){
      sighUpCard.style.marginTop="-650px"
 })
 signInCloseIcon.addEventListener('click',function(){
-     sighUpCard.style.marginTop="-650px"
+     sighInCard.style.marginTop="-650px"
 })
+
+ document.addEventListener('click', function(event) {
+     if (!sighUpCard.contains(event.target) && event.target !== signUpBtn) {
+         sighUpCard.style.marginTop = "-650px";
+     }
+     if(!sighInCard.contains(event.target)&&event.target !==signInBtn){
+          sighInCard.style.marginTop = "-650px";
+     }
+ });
+ 
 
 clickMenu.addEventListener('click',function(){
     if (headerMenu.style.marginTop === "-250px") {
