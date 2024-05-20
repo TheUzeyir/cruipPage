@@ -1,0 +1,722 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background: #151719;
+   padding:16px 184px;
+   color: #D9E3EA;
+   font-size: 20px;
+   font-family: "Roboto", sans-serif;
+}
+
+ul{
+   list-style: none;
+}
+
+button{
+   cursor: pointer;
+   border: none;
+}
+header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.header_icon{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+}
+.header_right_singUp{
+   color: blue;
+   background: none;
+   border: none;
+   font-size: 1.2rem;
+}
+.header_right_singUp:hover{
+   color: white;
+}
+.header_right_singIn:hover{
+   background: #4d4dd5;
+}
+.header_right_singIn{
+height: 40px;
+padding:0 1rem;
+background: #5D5DFF;
+color: white;
+border: none;
+font-weight: 500;
+font-size: 1.1rem;
+margin-left: 1rem;
+}
+
+.header_resBox{
+   display: none;
+   cursor: pointer;
+}
+
+.header_resBox_menu_container{
+   margin-top: -250px;
+   transition-duration: 0.7s;
+   position: absolute;
+   z-index: 45;
+   width: 94%;
+}
+
+.header_resBox_menu{
+   margin-top: 3rem;
+   position: relative;
+   z-index: -5;
+   width: 100%;   
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   background: #25282C;
+   padding: 1rem 0;
+}
+
+.header_resBox_menu_btnSignIn{
+   width: 100%;
+   padding: 0.5rem 0;
+   color: blue;
+   font-weight: bold;
+   background: transparent;
+   font-size: 1rem;
+}
+
+.header_resBox_menu_btnSignUp{
+   width: 96%;
+   padding: 0.5rem 0;
+   font-weight: bold;
+   font-size: 1.2rem;
+   font-size: 1.2rem;
+   background: #5D5DFF;
+   color: white;
+}
+
+.notification{
+   background: greenyellow;
+   color: blue;
+   padding: 0.5rem 1rem;
+   width: max-content;
+   border-radius: 8px;
+   position: fixed;
+   right: 2%;
+   display: none;
+}
+
+.notification_icon{
+   color: red;
+   margin-right: 1rem;
+}
+
+.signIn_container,.signUp_container  {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 50%;
+   max-height: 80vh;
+   overflow: auto;
+   z-index: 1;
+   background: rgba(0, 0, 0, 0.8);
+   transition-duration: 0.7s;
+   margin-top: -650px;
+}
+
+.signUp,.signIn {
+   background: #03101e;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+   position: relative;
+   color: white;
+   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   border-radius: 8px; 
+}
+
+.signUp_closeIcon,.signIn_closeIcon {
+   position: absolute;
+   top: 1rem;
+   right: 1rem;
+   cursor: pointer;
+   color: white;
+   font-size: 1.5rem;
+}
+
+.signUp_header,.signIn_header{
+   border-radius: 4px;
+   background: #DC2626;
+   padding:1rem 5rem 1rem 2rem;
+   margin-top: 2rem;
+   font-size: 1rem;
+   cursor: pointer;
+}
+
+.signUp_header_icon,.signIn_header_icon{
+   margin-right: 5rem;
+   padding-right: 5px;
+   border-right: 2px solid #E55C5C;
+}
+
+.signUp_title_container,.signIn_title_container{
+   color: gray;
+   font-size: 1rem;
+   margin: 2rem 0;
+   display: flex; 
+}
+
+.signUp_formBox_input,.signIn_formBox_input{
+   width: 100%;   
+   background: transparent;
+   margin:0.5rem 0 2rem 0;
+   padding: 1rem 1rem;
+   color: white;
+}
+
+.signUp_formBox_label,.signIn_formBox_label{
+   font-size: 1rem;
+}
+
+.signUp_formBox_label_span,.signIn_formBox_label_span{
+   color: red;
+}
+
+.signUp_formBox,.signIn_formBox{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.signUp_privacyText{
+   color: gray;
+   font-size: 1rem;
+}
+
+.signUp_privacyText_link{
+   color: gray;
+}
+
+.signIn_cehckCard{
+   color: gray;
+   font-size: 1.2rem;
+}
+
+.signIn_cehckCard_checkBox{
+   margin-right: 0.5rem;
+}
+
+.signIn_cehckCard{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.signUp_Btn,.signIn_Btn{
+   background:#5D5DFF;
+   color: white;
+   width: 100%;
+   padding: 1rem 0;
+   font-weight: bold;
+   font-size: 1rem;
+   margin: 1rem 0;
+}
+
+.signUp_footer,.signIn_footer{
+   font-size: 1rem;
+   color: gray;
+}
+
+.signIn_footer_signUpText,
+.signUp_footer_signUpText{
+   color: #333AF1;
+   text-decoration: none;
+}
+.signIn_footer_signUpText:hover,
+.signUp_footer_signUpText:hover{
+   color: white;
+}
+
+
+.pageVideoTrial{
+   padding: 0 40px;
+   margin-top: 96px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.pageVideoTrial_head{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.pageVideoTrial_head_title{
+   font-weight: bold;
+   font-size: 3.1rem;
+}
+
+.pageVideoTrial_head_desc{
+   width: 750px;
+   margin-top: 18px;
+   color: #9ba9b4;
+   font-size: 1.25rem;
+   line-height: 2.2rem;
+}
+
+.pageVideoTrial_head_btnBox{
+   display: flex;
+   gap: 1rem;
+   margin-top: 32px;
+}
+
+.pageVideoTrial_head_btnBox_btn{
+   padding: 0.8rem 1.8rem;
+   font-size: 1rem;
+   color: white;
+   border: none;
+}
+
+.pageVideoTrial_head_btnBox_btn:nth-child(1){
+   background: #4b4acf;
+}
+.pageVideoTrial_head_btnBox_btn:nth-child(2){
+   background: #33363a;
+}
+.pageVideoTrial_head_btnBox_btn:nth-child(2):hover{
+   background: #26282b;
+}
+.pageVideoTrial_head_btnBox_btn:nth-child(1):hover{
+   background: #3939be;
+}
+
+.pageVideoTrial_main{
+   width: 100%;
+   margin-top: 64px;
+}
+
+.pageInformationBox{
+   margin-top: 144px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   padding-bottom: 80px;
+   border-bottom: 1px solid #25282C;
+}
+
+.pageInformationBox_title,
+.pagePersonalInfo_title{
+   font-size: 2.2rem;
+   font-weight: bold;
+   width: 600px;
+}
+
+.pageInformationBox_desc{
+   color: #9ba9b4;
+   font-size: 1.3rem;
+   width: 720px;
+   margin-top: 20px;
+}
+
+.pageInformationBox_cards{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 64px;
+   margin-top: 80px;
+}
+
+.pageInformationBox_card{
+   display: flex;
+   flex-direction: column;
+   gap: 1.2rem;
+}
+
+.pageInformationBox_card_icon{
+   color: #3939be;
+   font-size: 2.5rem;
+}
+
+.pageInformationBox_card_title{
+   font-weight: bold;
+   font-size: 1.5rem;
+}
+
+.pageInformationBox_card_desc{
+   color: #9ba9b4;
+}
+
+.pageInformationParagrapsBox{
+   margin-top: 81px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding-bottom: 80px;
+   border-bottom: 1px solid #25282C;
+}
+
+.pageInformationParagrapsBox_head{
+   color:#16A34A;
+   padding: 0.5rem 2rem;
+   background: #BBF7D0;
+   width: 250px;
+   border-radius: 16px;
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+.pageInformationParagrapsBox_title{
+   font-weight: bold;
+   font-size: 2.2rem;
+   margin: 1rem 0;
+}
+
+.pageInformationParagrapsBox_desc,
+.pagePersonalInfo_desc{
+   width: 720px;
+   color: #9ba9b4;
+   margin-bottom: 64px;
+   text-align: center;
+}
+
+.pageInformationParagrapsBox_card,
+.pageInformationParagrapsBox_ResCard{
+   display: flex;
+   margin-bottom: 80px;
+   align-items: center;
+   gap: 60px;
+}
+
+.pageInformationParagrapsBox_card_main,
+.pageInformationParagrapsBox_ResCard_main{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   min-width: 200px  ;
+}
+
+.pageInformationParagrapsBox_card_img,
+.pageInformationParagrapsBox_ResCard_img{
+   width: 100%;
+}
+
+.pageInformationParagrapsBox_ResCard_img{
+   margin-top: 2rem;
+}
+
+.pageInformationParagrapsBox_card_main_headText,
+.pageInformationParagrapsBox_ResCard_main_headText{
+   color: blue;
+   font-style: italic;
+}
+
+.pageInformationParagrapsBox_card_main_mainText,
+.pageInformationParagrapsBox_ResCard_main_mainText{
+   font-weight: bold;
+   font-size: 1.8rem;
+}
+
+.pageInformationParagrapsBox_card_main_desc,
+.pageInformationParagrapsBox_ResCard_main_desc{
+   color: #9ba9b4;
+   line-height: 1.8rem;
+}
+
+.pageInformationParagrapsBox_card_main_desc_ul,
+.pageInformationParagrapsBox_ResCard_main_desc_ul{
+   margin-top: 1rem;
+}
+
+.pageInformationParagrapsBox_card_main_desc_ul_li_icon,
+.pageInformationParagrapsBox_ResCard_main_desc_ul_li_icon{
+   color: #16A34A;
+   margin-right: 0.2rem;
+}
+
+.pageInformationParagrapsBox_card_main_accardion_card{
+   border: 1px solid #9ba9b4;
+   padding: 0.7rem 1rem 0.7rem 0.5rem;
+}
+
+.pageInformationParagrapsBox_card_main_accardion_card_title{
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 0.5rem;
+}
+
+.pageInformationParagrapsBox_card_main_accardion_card_title_icon{
+   cursor: pointer;
+   transition-duration: 0.5s;
+}
+
+.pageInformationParagrapsBox_card_main_accardion_card_text{
+   padding-top: 1rem;
+   border-top: 1px solid #9ba9b4;
+   display: none; 
+}
+
+.pageInformationParagrapsBox_ResCard{
+   display: none;
+}
+
+.pagePersonalInfo{
+   margin-top: 81px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.pagePersonalInfo_cards{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 24px;
+}
+.pagePersonalInfo_card{
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   background: #25282C;
+   padding: 1rem;
+}
+
+.pagePersonalInfo_card_img{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   margin-bottom: 1rem;
+}
+
+.pagePersonalInfo_card_desc{
+   color: #9ba9b4;
+   text-align: start;
+   padding-bottom: 2.5rem;
+   border-bottom: 1px solid #33363a;
+}
+
+.pagePersonalInfo_card_footer{
+display: flex;
+gap: 1rem;
+justify-content: center;
+margin:1.5rem 0 1rem 0;
+}
+
+.pagePersonalInfo_card_footer_personalWork{
+   color: #5D5DFF;
+}
+
+.pageLoginBox{
+   background: #5D5DFF;
+   margin: 80px 0 64px 0;
+   display: flex;
+   gap: 2rem;
+   align-items: center;
+   padding:64px 48px;
+}
+
+.pageLoginBox_textCard{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 1rem;
+}
+
+.pageLoginBox_textCard_title{
+   font-weight: bold;
+   font-size: 2rem;
+}
+
+.pageLoginBox_formBox{
+   display: flex;
+   gap: 0.5rem;
+}
+
+.pageLoginBox_formBox_input{
+   background: #4B4ACF;
+   border: 1px solid #ABABFF;
+   padding: 1rem;
+   color: white;
+   padding-right: 5rem;
+}
+
+.pageLoginBox_formBox_input::placeholder{
+   color: #ABABFF;
+}
+
+.footer_head{
+   display: flex;
+   justify-content: space-between;
+   gap: 15rem;
+}
+
+.pageLoginBox_formBox_btn{
+   color: #7B6EFF;
+   padding: 1rem 1.5rem;
+   font-size: 1rem;
+   font-weight: 600;
+}
+
+.footer_head_left_icon{
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+}
+
+.footer_head_left_desc{
+   color: #9ba9b4;
+   margin-top: 1rem;
+   font-size: 1rem;
+   min-width: 40%
+}
+
+.footer_head_right{
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 5rem;
+}
+
+.footer_head_right_card_ul_li{
+   color: #9ba9b4;
+   margin-top: 1rem;
+   font-size: 0.8rem;
+   width: max-content;
+   cursor: pointer;
+}
+
+.footer_head_right_card_ul_li:hover{
+   color: white      ;
+}
+
+.footer_bottom{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 3rem;
+}
+
+.footer_bottom_left{
+   font-size: 0.9rem;
+   color: #9ba9b4;
+   
+}
+
+.footer_bottom_right{
+   display: flex;
+   gap: 1rem;
+}
+
+.footer_bottom_right_icon{
+   color: blue;
+   cursor: pointer;
+}
+
+@media screen and (max-width:1080px) {
+   body{
+      padding:20px;
+   }
+}
+@media screen and (max-width:968px) {
+   .pageInformationParagrapsBox_card_img{
+      width: 350px;
+   }
+
+   .pageLoginBox_formBox{
+      flex-direction: column;
+   }
+
+   .pageLoginBox{
+      flex-direction: column;
+   }
+
+   .footer_head{
+      gap: 2rem;
+   }
+
+   .footer_head_right{
+      grid-template-columns: 2fr;
+   }
+}
+@media screen and (max-width:768px) {
+   .header_right{
+      display: none;
+   }
+   .header_resBox{
+      display: block;
+   }
+
+   .pageVideoTrial{
+      padding: 0 0;
+   }
+
+   .pageVideoTrial_head_btnBox{
+      flex-direction: column;
+   }
+
+   .pageVideoTrial_head_btnBox_btn{
+      font-size: 1.8rem;
+   }
+
+   .pageInformationBox_title,
+   .pagePersonalInfo_title{
+      width: 100%;
+   }
+
+   .pageInformationBox_desc,
+   .pagePersonalInfo_desc{
+      width: 100%;
+   }
+
+   .pageVideoTrial_head_title{
+      font-size: 2.2rem;
+   }
+
+   .pageVideoTrial_head_desc{
+      width: 100%;
+   }
+
+   .pageInformationBox_cards{
+      grid-template-columns: 1fr;
+   }
+   .pageInformationBox_card_desc{
+      width: 100%;
+   }
+   .pageInformationParagrapsBox_desc{
+      width: 100%;
+   }
+   .pageInformationParagrapsBox_title{
+      text-align: center;
+      font-size: 1.5rem;
+   }
+   .pageInformationParagrapsBox_card_img,
+   .pageInformationParagrapsBox_ResCard_img{
+      width: 100%;
+   }
+   .pageInformationParagrapsBox_card,
+   .pageInformationParagrapsBox_ResCard{
+      flex-direction: column;
+   }
+  .pageInformationParagrapsBox_card:nth-of-type(3) {
+    display: none;
+  }
+   .pageInformationParagrapsBox_ResCard{
+      display: block;
+   }
+
+   .pagePersonalInfo_cards{
+      grid-template-columns: 1fr;
+   }
+   .pageLoginBox_formBox{
+      width: 100%;
+      gap: 1.5rem;
+   }
+}
