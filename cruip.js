@@ -11,7 +11,10 @@ let signInBtn=document.querySelector('.header_right_singIn')
 let sighUpCard=document.querySelector('.signUp_container')
 let sighInCard=document.querySelector('.signIn_container')
 let signUpInput=document.querySelectorAll('.signUp_formBox_input')
+let signInInput=document.querySelectorAll('.signIn_formBox_input')
 let signUpSubmitBtn=document.querySelector('.signUp_Btn')
+let signInSubmitBtn=document.querySelector('.signIn_Btn')
+
 
 signUpBtn.addEventListener('click',function(){
      sighUpCard.style.marginTop="0px"
@@ -21,10 +24,10 @@ signInBtn.addEventListener('click',function(){
      sighInCard.style.marginTop="0px"
 })
 signUpCloseIcon.addEventListener('click',function(){
-     sighUpCard.style.marginTop="-650px"
+     sighUpCard.style.marginTop="-1050px"
 })
 signInCloseIcon.addEventListener('click',function(){
-     sighInCard.style.marginTop="-650px"
+     sighInCard.style.marginTop="-1050px"
 })
 
  document.addEventListener('click', function(event) {
@@ -45,20 +48,56 @@ clickMenu.addEventListener('click',function(){
    }
 })
 
-signUpSubmitBtn.addEventListener('click',function(){
-     if(signUpInput.value==0){
-          alert('Please login')  
-     }
+signUpSubmitBtn.addEventListener('click',function(event){
+     let allFilled = true;
+     signUpInput.forEach(input => {
+          if (input.value.trim() === '') {
+              allFilled = false;
+          }
+      });
+      if (!allFilled) {
+          alert('Please fill out all fields');
+      } 
      else{
-          SingUpInputValue=signUpInput.value
-          console.log(SingUpInputValue);
-          signUpInput.value=''
-               notification.style.display="block"  
+          signUpInput.forEach(input => {
+               console.log(`${input.type.charAt(0).toUpperCase() + input.type.slice(1)} value of ${input.name}: ${input.value}`);
+           });
+          signUpInput.forEach(input => {
+              input.value = '';
+          });
+          notification.style.display = "block";
           setTimeout(() => {
                notification.style.display="none"  
           }, 1500);
+     sighUpCard.style.marginTop="-1050px"
      }
 })
+signInSubmitBtn.addEventListener('click', function(event) {
+    let allFilled=true;
+    signInInput.forEach(input=>{
+         if(input.value.trim()===''){
+          allFilled=false
+         }
+    })
+
+    if (!allFilled) {
+     alert('Please fill out all fields');
+    }
+    else{
+     signInInput.forEach(input=>{
+          console.log(`${input.type.charAt(0).toUpperCase()+input.type.slice(1)} value of ${input.name}:${input.value}`);
+     })
+     signInInput.forEach(input => {
+          input.value = '';
+      });
+      notification.style.display = "block";
+      setTimeout(() => {
+           notification.style.display="none"  
+      }, 1500);
+     sighInCard.style.marginTop="-1050px"
+    }
+});
+
 
 inputBtn.addEventListener('click',function(e){
      if(input.value==0){
